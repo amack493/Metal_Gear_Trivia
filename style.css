@@ -1,13 +1,19 @@
+/* *{
+    box-sizing: border-box;
+}
 body{
+background: #ccc123;
 }
 
 .startscreen {
 display:flex;
+flex-direction: column;
 justify-content: center;
 height: 700px;
-background:black;
+background:#ccc;
 }
 
 .easy {
 align-self: flex-end;
 }
+ */
