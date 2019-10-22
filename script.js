@@ -1,14 +1,14 @@
 console.log('HELLO TRE');
 
-const easy = document.querySelector('.easy');
-easy.addEventListener('click', function (e) {
-    e.preventDefault();
-    console.log('working ;)')
-})
-
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
+// const easy = document.querySelector('.easy');
+// easy.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     console.log('working ;)')
+// })
+const startScreen = document.getElementByClassName('startscreen');
+const question = document.getElementByClassName('question');
+const answers = document.getElementsByClassName('answers');
+const submit = document.getElementByClassName('submit');
 
 function buildQuiz(){}
 
@@ -30,10 +30,6 @@ const output = [];
             
 //         }
 //     }
-
-
-//when submitted shows results
-// submitButton.addEventListeners('click', showResults);
 
 const questions = [
 {

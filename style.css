@@ -1,3 +1,43 @@
+.startscreen {
+background: #f08080;
+height: 500px;
+}
+
+h1 {
+    position: absolute;
+    left: 5em;
+}
+
+h2 {
+    position: absolute;
+    left: 6em;
+    top: 3em;
+}
+
+.question {
+    position: absolute;
+    left: 8.5em;
+    top: 10em;
+}
+
+.answers {
+    position: relative;
+    top: 15em;
+    left: 10em;
+    padding: 5px;
+}
+
+.submit {
+    position: relative;
+    top: 25em;
+    
+
+}
+
+
+
+
+
 /* *{
     box-sizing: border-box;
 }
