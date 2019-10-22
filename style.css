@@ -3,5 +3,11 @@ body{
 
 .startscreen {
 display:flex;
+justify-content: center;
+height: 700px;
 background:black;
+}
+
+.easy {
+align-self: flex-end;
 }
