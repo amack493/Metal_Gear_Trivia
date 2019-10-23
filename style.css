@@ -3,6 +3,8 @@
     src: url(metal-gear-solid/METAG___.TTF)
 }
 
+
+
 body {
     background: #ccc;
 }
@@ -21,7 +23,7 @@ main {
     border: 2px;
     width: 100px;
     background: #ccc;
-    font-family:
+    font-size: 30px;
     
 }
 
@@ -30,4 +32,12 @@ font-size: 60px;
 font-family:MetalGear;
 letter-spacing: 3px;
 color: red;
+}
+
+.choice {
+    font-size: 30px;
+}
+
+#question {
+    font-size: 50px;
 }
