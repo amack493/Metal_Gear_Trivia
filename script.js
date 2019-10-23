@@ -36,6 +36,25 @@ const output = [];
 //         }
 //     }
 
+// Document.getElementByClassName('question').innerHTML = question;
+class question {
+    constructor (questions, choices, answer){
+    this.questions=questions
+    this.choices=choices
+    this.answer=answer
+    }
+}
+
+class quiz {
+    constructor(questions) {
+        this.questions = questions
+    }
+    getCurrentQuestion() {
+        return this.questions;
+    }
+}
+
+
 const questions = [
 {
     question: "Who's the main character in Metal Gear Solid?",
