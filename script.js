@@ -19,32 +19,29 @@ const scoreDiv = document.getElementById('scoreContainer');
 let questions = [
     {
         question: "Who's the main character in Metal Gear Solid?",
-        answers: {
-            a: 'Solid Snake',
-            b: 'Psycho Mantis',
-            c: 'Revolver Ocelot'
-        },
-        correctAnswer: 'a'
-    },
-    {
+        
+        choiceA: 'Solid Snake',
+        choiceB: 'Psycho Mantis',
+        choiceC: 'Revolver Ocelot',
+        
+        correct: 'A'
+    },{
         question: 'Who created Metal Gear?',
-        answers: {
-            a: 'Genndy Tartakovsky',
-            b: 'Hideo Kojima',
-            c: 'Stephen Hillenberg'
-        },
-        correctAnswer: 'b'
-    },
-    {
+            choiceA: 'Genndy Tartakovsky',
+            choiceB: 'Hideo Kojima',
+            choiceC: 'Stephen Hillenberg',
+        
+        correct: 'B'
+    },{
         question: "What's the best disguise?",
-        answers: {
-            a: 'A cardboard Box',
-            b: 'An Enemy Uniform',
-            c: 'A fake mustache'
-        },
-        correctAnswer: 'a'
+        
+        choiceA: 'A cardboard Box',
+        choiceB: 'An Enemy Uniform',
+        choiceC: 'A fake mustache',
+        
+        correct: 'A'
     }
-    ];
+]
     
     
 
