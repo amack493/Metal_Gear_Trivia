@@ -1,59 +1,15 @@
-.quizboard {
-background: #f08080;
-height: 500px;
+body {
+    background: #ccc;
 }
 
-h1 {
-    position: absolute;
-    left: 5em;
+main {
+    background: gray;
 }
 
-h2 {
-    position: absolute;
-    left: 6em;
-    top: 3em;
+.choice {
+    cursor: pointer;
 }
 
-.question {
-    position: absolute;
-    left: 8.5em;
-    top: 10em;
+#start{
+    cursor:  pointer;
 }
-
-.answers {
-    position: relative;
-    top: 15em;
-    left: 10em;
-    padding: 5px;
-}
-
-.submit {
-    position: relative;
-    top: 25em;
-    
-
-}
-
-
-
-
-
-/* *{
-    box-sizing: border-box;
-}
-body{
-background: #ccc123;
-}
-
-.startscreen {
-display:flex;
-flex-direction: column;
-justify-content: center;
-height: 700px;
-background:#ccc;
-}
-
-.easy {
-align-self: flex-end;
-}
- */
