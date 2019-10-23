@@ -1,126 +1,116 @@
 console.log('HELLO TRE');
 
-// const easy = document.querySelector('.easy');
-// easy.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     console.log('working ;)')
-// })
-// const quizboard = document.getElementByClassName('quizboard');
-// // const question = document.getElementByClassName('question');
-// const answers = document.getElementsByClassName('answers');
-// const submit = document.getElementByClassName('submit');
+const start = document.getElementById('start');
 
+const quiz = document.getElementById('quiz');
 
-// document.getElementByClassName('question').innerHTML=questions;
+const question = document.getElementById('question');
 
+const choices = document.getElementById('choices');
 
+const choiceA = document.getElementById('A');
 
-function buildQuiz(){}
+const choiceB = document.getElementById('B');
 
-function showResults(){}
+const choiceC = document.getElementById('C');
 
-//builds quiz
-buildQuiz();
-//stores html output
-const output = [];
+const scoreDiv = document.getElementById('scoreContainer');
 
-// questions.forEach(
-//     currentQuestion, questionNumber); {
-//         //stores answers
-//         const answers = []
-
-//         //for each available answer
-//         for(letter in currentQuestion.answers){
-//             answers.push
-            
-//         }
-//     }
-
-// Document.getElementByClassName('question').innerHTML = question;
-class question {
-    constructor (question, answers, answer){
-    this.question=question
-    this.answers=answers
-    this.correctAnswer=correctAnswer
-    }
-    correctAnswer(chosenAnswer) {
-        if(chosenAnswer == this.answer){
-            return true;
-        }else{
-            return false;
-        }
-    }
-}
-
-class quiz {
-    constructor(questions) {
-        this.questions = questions
-    }
-    getCurrentQuestion() {
-        return this.questions;
-    }
-}
-
-function showCurrentQuestion() {
-    const currentQuestion = currentQuiz.getCurrentQuestion();
-    document.querySelector('.question').textContent = currentQuestion.question;
-    let answersShown = document.createElement('ul');
-    for(i = 0; currentQuestion.answers.length; i++) {
-        let answerChoices = document.createElement('li');
-        let replacedItem = currentQuestion.answerChoices[i];
-    }
-    answerChoices.textContent = currentQuestion.answerChoices[i]
-    answersShown.appendChild(answerChoices);
-}
-    answers.innerHTML = ''
-    answers.appendChild(answerChoices);
-
-
-const questions = [
-{
-    question: "Who's the main character in Metal Gear Solid?",
-    answers: {
-        a: 'Solid Snake',
-        b: 'Psycho Mantis',
-        c: 'Revolver Ocelot'
+let questions = [
+    {
+        question: "Who's the main character in Metal Gear Solid?",
+        answers: {
+            a: 'Solid Snake',
+            b: 'Psycho Mantis',
+            c: 'Revolver Ocelot'
+        },
+        correctAnswer: 'a'
     },
-    correctAnswer: 'a'
-},
-{
-    question: 'Who created Metal Gear?',
-    answers: {
-        a: 'Genndy Tartakovsky',
-        b: 'Hideo Kojima',
-        c: 'Stephen Hillenberg'
+    {
+        question: 'Who created Metal Gear?',
+        answers: {
+            a: 'Genndy Tartakovsky',
+            b: 'Hideo Kojima',
+            c: 'Stephen Hillenberg'
+        },
+        correctAnswer: 'b'
     },
-    correctAnswer: 'b'
-},
-{
-    question: "What's the best disguise?",
-    answers: {
-        a: 'A cardboard Box',
-        b: 'An Enemy Uniform',
-        c: 'A fake mustache'
-    },
-    correctAnswer: 'a'
+    {
+        question: "What's the best disguise?",
+        answers: {
+            a: 'A cardboard Box',
+            b: 'An Enemy Uniform',
+            c: 'A fake mustache'
+        },
+        correctAnswer: 'a'
+    }
+    ];
+    
+    
+
+     
+
+const lastQuestion = questions.length - 1;
+
+let runningQuestion = 0;
+function checkAnswer(answer){
+    if(questions[runningQuestionIndex.correct == answer]){
+        score++;
+        answerIsCorrect();
+    }else{
+        answerIsWrong();
+    }
+    if(runningQuestionIndex < lastQuestionIndex){
+        count = 0;
+        runningQuestionIndex++;
+        renderQuestion();
+    }else{
+        scoreRender;
+    }
 }
-];
 
-// const questions = [ 
-//     {prompt: 'Who is the main character of Metal Gear Solid\n(a) Solid Snake\n\(b) Psycho Mantis\n\(c) Revolver Ocelot',
-// answer: "a"},
-// {prompt: 'Who created Metal Gear?\n(a)Gendy Tartokovsky\n\(b)Hideo Kojima\n\(c)Steven Hillenberg',
-// answer: "b"}
-// ]
 
-//  score = 0;
+function renderQuestion (){
+    let q = questions[runningQuestion];
 
-// for(let i = 0; i < questions.length; i++){
-//     const response = window.prompt(questions[i].prompt);
-//     if(response == questions[i].answer){
-//         score++;
-//         alert("CORRECT!");
-//     } else{
-//         alert("INCORRECT!");
-//     }
-// }
+    question.innerHTML = "<p>"+ q.question + "<p>";
+
+    choiceA.innerHTML = q.choiceA;
+
+    choiceB.innerHTML = q.choiceB;
+
+    choiceC.innerHTML = q.choiceC;
+}
+
+
+start.addEventListener("click", startQuiz);
+    function startQuiz(){
+        start.style.display = 'none';
+        renderQuestion();
+        quiz.style.display = 'block';
+    }
+
+function scoreRender(){
+    scoreContainer.style.display = 'block';
+    letScorePercent = Math.round(100 * score / questions.length);
+}
+
+function checkAnswer(answer) {
+    if(answer == questions[runningQuestion].correct) {
+
+    }
+    if(runningQuestion < lastQuestion) {
+        runningQuestion++;
+        renderQuestion();
+    }else{
+        
+    }
+}
+
+
+
+
+
+
+
+
