@@ -5,10 +5,15 @@ console.log('HELLO TRE');
 //     e.preventDefault();
 //     console.log('working ;)')
 // })
-const startScreen = document.getElementByClassName('startscreen');
+const quizboard = document.getElementByClassName('quizboard');
 const question = document.getElementByClassName('question');
 const answers = document.getElementsByClassName('answers');
 const submit = document.getElementByClassName('submit');
+
+
+document.getElementByClassName('question').innerHTML=questions;
+
+
 
 function buildQuiz(){}
 
