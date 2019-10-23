@@ -40,7 +40,7 @@ let questions = [
         choiceC: 'A fake mustache',
         
         correct: 'A'
-    }
+    },
 ]
     
     
