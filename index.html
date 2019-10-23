@@ -6,19 +6,19 @@
     <title>PROJECT-1</title>
   </head>
   <body>
-   <div class='quizboard'>
-     <h1>METAL GEAR TRIVIA</h1>
-    <h2>How well do you know Metal Gear?</h2>
-    <div class= "qstnnmbr"></div>
-    <div class="question"></div>
-    <label class="answers"><input type="radio" name="answers" value="a" /></label>
-    <label class="answers"><input type="radio" name="answers" value="b" /></label>
-    <label class="answers"><input type="radio" name="answers" value="c" /></label>
-    <label class="submit"><input type="submit" name="submit" value="submit"></label>
-
-    <!-- <button class='easy'>easy</button> -->
-</div>
-
+    <main>
+    <div id="container">
+     <div id="start">Start Quiz</div>
+    <div id="quiz" style="display:none">
+    <div id="question"></div>
+    <div id="choices"></div>
+    <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+    <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+    <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                    </div>
+                    <div id="scoreContainer" style="display: none"></div>
+                </div>
+</main>
     <script src="script.js"></script>
   </body>
 </html>

@@ -5,13 +5,13 @@ console.log('HELLO TRE');
 //     e.preventDefault();
 //     console.log('working ;)')
 // })
-const quizboard = document.getElementByClassName('quizboard');
-const question = document.getElementByClassName('question');
-const answers = document.getElementsByClassName('answers');
-const submit = document.getElementByClassName('submit');
+// const quizboard = document.getElementByClassName('quizboard');
+// // const question = document.getElementByClassName('question');
+// const answers = document.getElementsByClassName('answers');
+// const submit = document.getElementByClassName('submit');
 
 
-document.getElementByClassName('question').innerHTML=questions;
+// document.getElementByClassName('question').innerHTML=questions;
 
 
 
@@ -38,10 +38,17 @@ const output = [];
 
 // Document.getElementByClassName('question').innerHTML = question;
 class question {
-    constructor (questions, choices, answer){
-    this.questions=questions
-    this.choices=choices
-    this.answer=answer
+    constructor (question, answers, answer){
+    this.question=question
+    this.answers=answers
+    this.correctAnswer=correctAnswer
+    }
+    correctAnswer(chosenAnswer) {
+        if(chosenAnswer == this.answer){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 
@@ -53,6 +60,20 @@ class quiz {
         return this.questions;
     }
 }
+
+function showCurrentQuestion() {
+    const currentQuestion = currentQuiz.getCurrentQuestion();
+    document.querySelector('.question').textContent = currentQuestion.question;
+    let answersShown = document.createElement('ul');
+    for(i = 0; currentQuestion.answers.length; i++) {
+        let answerChoices = document.createElement('li');
+        let replacedItem = currentQuestion.answerChoices[i];
+    }
+    answerChoices.textContent = currentQuestion.answerChoices[i]
+    answersShown.appendChild(answerChoices);
+}
+    answers.innerHTML = ''
+    answers.appendChild(answerChoices);
 
 
 const questions = [
