@@ -4,6 +4,8 @@ const start = document.getElementById('start');
 
 const quiz = document.getElementById('quiz');
 
+const questionNum = document.getElementById('questionNum');
+
 const question = document.getElementById('question');
 
 const choices = document.getElementById('choices');
@@ -91,10 +93,10 @@ function scoreRender(){
     scoreContainer.style.display = 'block';
     letScorePercent = Math.round(100 * score / questions.length);
 }
-
+score=0;
 function checkAnswer(answer) {
     if(answer == questions[runningQuestion].correct) {
-
+        score++;
     }
     if(runningQuestion < lastQuestion) {
         runningQuestion++;
