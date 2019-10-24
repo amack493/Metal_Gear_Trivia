@@ -16,6 +16,9 @@ main {
 
 .choice {
     cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    margin-right: 35em; 
 }
 
 #start{
@@ -26,6 +29,7 @@ main {
     width: 100px;
     background: #ccc;
     font-size: 30px;
+    margin-left: 21em;
     
 }
 
@@ -34,16 +38,25 @@ font-size: 60px;
 font-family:MetalGear;
 letter-spacing: 3px;
 color: red;
-}
-
-.choice {
-    font-size: 30px;
+margin-left: 5em;
 }
 
 #question {
     font-size: 50px;
 }
 
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity:1;}
+}
+
 #scoreContainer {
+z-index: 1;
 background: white;
+font-size: 50px;
+position: absolute;
+bottom: .6em;
+/* left: 5em; */
+padding: 225px 666px;
+animation:fadeIn ease 3s;
 }

@@ -16,10 +16,14 @@ const choiceB = document.getElementById('B');
 
 const choiceC = document.getElementById('C');
 
-const lives = document.getElementById('lifebar')
+const lives = document.getElementById('lifebar');
 
 const scoreDiv = document.getElementById('scoreContainer');
 
+const end = document.getElementById('end');
+
+const restart = document.getElementById('restart');
+//questions for quiz
 let questions = [
     {
         question: "Who's the main character in Metal Gear Solid?",
@@ -50,7 +54,7 @@ let questions = [
     
 
      
-
+//cycles through questions until end of quiz
 const lastQuestion = questions.length - 1;
 
 let currentQuestion = 0;
@@ -67,10 +71,11 @@ function checkAnswer(answer){
         showQuestion();
     }else{
         showScore();
+
     }
 }
 
-
+//shows questions
 function showQuestion (){
     let q = questions[currentQuestion];
 
@@ -83,20 +88,21 @@ function showQuestion (){
     choiceC.innerHTML = q.choiceC;
 }
 
-
+//starts quiz
 start.addEventListener("click", startQuiz);
     function startQuiz(){
         start.style.display = 'none';
         showQuestion();
         quiz.style.display = 'block';
     }
-
+//shows percentage at end of quiz
 function showScore(){
     scoreDiv.style.display = 'block';
     let ScorePercent = Math.round(100 * score / questions.length);
     scoreDiv.innerHTML = "<p>" + ScorePercent +"%</p>";
 }
 score=0;
+//shows questions until end of quiz then shows percent
 function checkAnswer(answer) {
     if(answer == questions[currentQuestion].correct) {
         score++;
@@ -108,8 +114,18 @@ function checkAnswer(answer) {
     showScore(); 
     }
 }
-
-
+    // function restartQuiz(){
+    //     if(currentQuestionIndex == lastQuestionIndex){
+    //         restart.addEventListener("click", restartQuiz);
+    //         function restartQuiz(){
+    //             restart.style.display = 'none';
+    //             end.style.display = 'block';
+    //        }
+         
+    //         restartQuiz();
+    //     }
+    // }
+    
 
 
 

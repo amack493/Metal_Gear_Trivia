@@ -12,6 +12,7 @@
     <main>
     <div id="container">
      <div id="start">Start Quiz</div>
+     <div id="restart" style="display: none">Try Again?</div>
     <div id="quiz" style="display:none">
     <div id="questionNum"></div>
     <div id="question"></div>
@@ -20,10 +21,10 @@
     <div class="choice" id="B" onclick="checkAnswer('B')"></div>
     <div class="choice" id="C" onclick="checkAnswer('C')"></div>
     <div id="lifebar"><div class="lives"></div>
-        </div>
-        <div id="scoreContainer" style="display: none"></div>
+    <div id="end" style="display:none"></div>
      </div>
 </main>
+<div id="scoreContainer" style="display: none"></div>
     <script src="script.js"></script>
   </body>
 </html>
