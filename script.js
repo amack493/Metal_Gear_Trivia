@@ -16,6 +16,8 @@ const choiceB = document.getElementById('B');
 
 const choiceC = document.getElementById('C');
 
+const progress = document.getElementById('progress');
+
 const scoreDiv = document.getElementById('scoreContainer');
 
 let questions = [
@@ -93,10 +95,19 @@ function scoreRender(){
     scoreContainer.style.display = 'block';
     letScorePercent = Math.round(100 * score / questions.length);
 }
+
+function renderProgress(){
+    for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
+        progress.innerHTML += "<div class='prog' id="+ qIndex +"></div">
+    }
+}
 score=0;
 function checkAnswer(answer) {
     if(answer == questions[runningQuestion].correct) {
         score++;
+        answerIsCorrect();
+    }else{
+        answerIsWrong();
     }
     if(runningQuestion < lastQuestion) {
         runningQuestion++;
