@@ -55,15 +55,15 @@ const lastQuestion = questions.length - 1;
 
 let runningQuestion = 0;
 function checkAnswer(answer){
-    if(questions[runningQuestionIndex.correct == answer]){
+    if(questions[runningQuestion[i].correct == answer]){
         score++;
         answerIsCorrect();
     }else{
         answerIsWrong();
     }
-    if(runningQuestionIndex < lastQuestionIndex){
+    if(runningQuestion[i] < lastQuestion[i]){
         count = 0;
-        runningQuestionIndex++;
+        runningQuestion[i]++;
         renderQuestion();
     }else{
         scoreRender;
@@ -96,18 +96,12 @@ function scoreRender(){
     letScorePercent = Math.round(100 * score / questions.length);
 }
 
-function renderProgress(){
-    for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
-        progress.innerHTML += "<div class='prog' id="+ qIndex +"></div">
-    }
-}
+
+
 score=0;
 function checkAnswer(answer) {
     if(answer == questions[runningQuestion].correct) {
         score++;
-        answerIsCorrect();
-    }else{
-        answerIsWrong();
     }
     if(runningQuestion < lastQuestion) {
         runningQuestion++;
