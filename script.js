@@ -16,7 +16,7 @@ const choiceB = document.getElementById('B');
 
 const choiceC = document.getElementById('C');
 
-const progress = document.getElementById('lifebar');
+const lives = document.getElementById('lifebar')
 
 const scoreDiv = document.getElementById('scoreContainer');
 
@@ -53,26 +53,26 @@ let questions = [
 
 const lastQuestion = questions.length - 1;
 
-let runningQuestion = 0;
+let currentQuestion = 0;
 function checkAnswer(answer){
-    if(questions[runningQuestion[i].correct == answer]){
+    if(questions[currentQuestionIndex.correct == answer]){
         score++;
         answerIsCorrect();
     }else{
         answerIsWrong();
     }
-    if(runningQuestion[i] < lastQuestion[i]){
+    if(currentQuestionIndex < lastQuestionIndex){
         count = 0;
-        runningQuestion[i]++;
-        renderQuestion();
+        currentQuestionIndex++;
+        showQuestion();
     }else{
-        scoreRender;
+        showScore();
     }
 }
 
 
-function renderQuestion (){
-    let q = questions[runningQuestion];
+function showQuestion (){
+    let q = questions[currentQuestion];
 
     question.innerHTML = "<p>"+ q.question + "<p>";
 
@@ -87,27 +87,25 @@ function renderQuestion (){
 start.addEventListener("click", startQuiz);
     function startQuiz(){
         start.style.display = 'none';
-        renderQuestion();
+        showQuestion();
         quiz.style.display = 'block';
     }
 
-function scoreRender(){
-    scoreContainer.style.display = 'block';
-    letScorePercent = Math.round(100 * score / questions.length);
+function showScore(){
+    scoreDiv.style.display = 'block';
+    let ScorePercent = Math.round(100 * score / questions.length);
+    scoreDiv.innerHTML = "<p>" + ScorePercent +"%</p>";
 }
-
-
-
 score=0;
 function checkAnswer(answer) {
-    if(answer == questions[runningQuestion].correct) {
+    if(answer == questions[currentQuestion].correct) {
         score++;
     }
-    if(runningQuestion < lastQuestion) {
-        runningQuestion++;
-        renderQuestion();
+    if(currentQuestion < lastQuestion) {
+        currentQuestion++;
+        showQuestion();
     }else{
-        
+    showScore(); 
     }
 }
 
