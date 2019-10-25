@@ -58,9 +58,55 @@ let questions = [
         choiceB: 'Vulcan Raven',
         choiceC: 'Liquid Snake',
 
-        correct: 'C',
+        correct: 'C'
     },{
-        
+        question: 'What tank was being developed by Dr. Sokolov?',
+
+        choiceA: 'Peacewalker',
+        choiceB: 'The Shagohad',
+        choiceC: 'Metal Gear Rex',
+
+        correct: 'B'
+    },{
+        question: 'In which game did Hideo Kojima make a cameo appearance?',
+
+        choiceA: 'MG Portable Ops',
+        choiceB: 'Metal Gear Rising: Revengeance',
+        choiceC: 'MG Ground Zeroes',
+
+        correct: 'C'
+    },{
+        question: 'Which character made the most recurring appearance?',
+
+        choiceA: 'Revolver Ocelot',
+        choiceB: 'Big Boss',
+        choiceC: 'Raiden',
+
+        correct: 'A'
+    },{
+        question: 'What console was the first Metal Gear released for?',
+
+        choiceA: 'MSX2 computer',
+        choiceB: 'Playstation',
+        choiceC: 'Playstation 2',
+
+        correct: 'A'
+    },{
+        question: '',
+
+        choiceA: '',
+        choiceB: '',
+        choiceC: '',
+
+        correct: ''
+    },{
+        question: '',
+
+        choiceA: '',
+        choiceB: '',
+        choiceC: '',
+
+        correct: '',
     }
 ]
 //starts quiz and plays background music upon start
