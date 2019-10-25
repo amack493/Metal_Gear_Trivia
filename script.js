@@ -207,7 +207,6 @@ score=0;
         }else{
         
         showScore(); 
-        showScoreImg();
         }
     }
 

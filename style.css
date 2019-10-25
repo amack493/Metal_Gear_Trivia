@@ -92,14 +92,8 @@ color: red;
 
 #C{
     position: absolute;
-    left: 30em;
+    left: 28em;
     top: 14em;
 }
 
-h2 {
-    font-family:Arial, Helvetica, sans-serif;
-    padding-top: 4em;
-    text-align: center;
-    font-size: 50px;
-    color: red;
-}
+
