@@ -102,15 +102,7 @@ let questions = [
         choiceC: 'Militaires  Sans  Frontières',
 
         correct: 'B'
-     }//,{
-    //     question: '',
-
-    //     choiceA: '',
-    //     choiceB: '',
-    //     choiceC: '',
-
-    //     correct: '',
-    // }
+     }
 ]
 //starts quiz and plays background music upon start
 start.addEventListener("click", startQuiz);
@@ -149,29 +141,11 @@ function showQuestion (){
 function showScore(){
     scoreDiv.style.display = 'block';
     let ScorePercent = Math.round(100 * score / questions.length);
-    //supposed to display message per percent score
-    // if(scorePercent >=80) "<p>" + 'Wow you really know your Metal Gear!' + "</p>";{  
-    // }else{
-    //  if(scorePercent >=60) = "<p>" + "Not bad! You're pretty good!" + "</p>";
-    //    (scorePercent >=40) = "<p>" + 'Better luck next time!' + "</p>";
-    //     (scorePercent >=20) = "<p>" + 'Maybe you need to play some more' + "</p>";
+   
     scoreDiv.innerHTML += "<p>You got " + ScorePercent +"% correct</p>";
 }
 
 score=0;
-//shows questions until end of quiz then shows percent
-
-    // function restartQuiz(){
-    //     if(currentQuestionIndex == lastQuestionIndex){
-    //         restart.addEventListener("click", restartQuiz);
-    //         function restartQuiz(){
-    //             restart.style.display = 'none';
-    //             end.style.display = 'block';
-    //        }
-         
-    //         restartQuiz();
-    //     }
-    // }
     
     function checkAnswer(answer) {
         if(answer == questions[currentQuestion].correct) {
