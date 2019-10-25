@@ -1,5 +1,7 @@
 console.log('HELLO TRE');
 
+
+
 const start = document.getElementById('start');
 
 const quiz = document.getElementById('quiz');
@@ -23,6 +25,7 @@ const scoreDiv = document.getElementById('scoreContainer');
 const end = document.getElementById('end');
 
 const restart = document.getElementById('restart');
+
 //questions for quiz
 let questions = [
     {
@@ -34,7 +37,7 @@ let questions = [
         
         correct: 'A'
     },{
-        question: 'Who created Metal Gear?',
+        question: 'Who was the developer for the  Metal Gear series?',
             choiceA: 'Genndy Tartakovsky',
             choiceB: 'Hideo Kojima',
             choiceC: 'Stephen Hillenberg',
@@ -48,16 +51,35 @@ let questions = [
         choiceC: 'A fake mustache',
         
         correct: 'A'
-    },
-]
-    
-    
+    },{
+        question: "Who was the main antagonist of Metal Gear Solid?",
 
-     
+        choiceA: 'Colonel Campbell',
+        choiceB: 'Vulcan Raven',
+        choiceC: 'Liquid Snake',
+
+        correct: 'C',
+    },{
+        
+    }
+]
+//starts quiz and plays background music upon start
+start.addEventListener("click", startQuiz);
+    function startQuiz(){
+        let audio = new Audio('gameaudio/Metal_gear_solid_Alert_Theme.mp3');
+    audio.play();
+        start.style.display = 'none';
+        showQuestion();
+        quiz.style.display = 'block';
+       
+       
+    }
+    
 //cycles through questions until end of quiz
 const lastQuestion = questions.length - 1;
 
 let currentQuestion = 0;
+
 function checkAnswer(answer){
     if(questions[currentQuestionIndex.correct == answer]){
         score++;
@@ -70,10 +92,13 @@ function checkAnswer(answer){
         currentQuestionIndex++;
         showQuestion();
     }else{
+        
         showScore();
 
     }
 }
+     
+    
 
 //shows questions
 function showQuestion (){
@@ -87,14 +112,10 @@ function showQuestion (){
 
     choiceC.innerHTML = q.choiceC;
 }
-
 //starts quiz
-start.addEventListener("click", startQuiz);
-    function startQuiz(){
-        start.style.display = 'none';
-        showQuestion();
-        quiz.style.display = 'block';
-    }
+
+
+    
 //shows percentage at end of quiz
 function showScore(){
     scoreDiv.style.display = 'block';
@@ -111,6 +132,7 @@ function checkAnswer(answer) {
         currentQuestion++;
         showQuestion();
     }else{
+    
     showScore(); 
     }
 }
