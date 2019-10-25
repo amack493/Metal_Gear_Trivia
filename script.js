@@ -92,22 +92,22 @@ let questions = [
 
         correct: 'A'
     },{
-        question: '',
+        question: 'What was the name of the mercenary group led by Big Boss in MGS The Phantom Pain?',
 
-        choiceA: '',
-        choiceB: '',
-        choiceC: '',
+        choiceA: 'Foxhound',
+        choiceB: 'Diamond Dogs',
+        choiceC: 'Militaires Sans Frontières',
 
-        correct: ''
-    },{
-        question: '',
+        correct: 'B'
+     }//,{
+    //     question: '',
 
-        choiceA: '',
-        choiceB: '',
-        choiceC: '',
+    //     choiceA: '',
+    //     choiceB: '',
+    //     choiceC: '',
 
-        correct: '',
-    }
+    //     correct: '',
+    // }
 ]
 //starts quiz and plays background music upon start
 start.addEventListener("click", startQuiz);

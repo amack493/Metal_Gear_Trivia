@@ -18,7 +18,7 @@ main {
     cursor: pointer;
     font-size: 35px;
     padding: 10px;
-    margin-right: 35em;
+    /* margin-right: 40em; */
     color: red;
 }
 
@@ -62,3 +62,23 @@ bottom: .6em;
 padding: 225px 665px;
 animation:fadeIn ease 3s;
 }
+
+#A{
+    position: absolute;
+    top:18em;
+    left: 2em;
+}
+
+#B{
+    position: absolute;
+    left: 15em;
+    top: 18em;
+}
+
+#C{
+    position: absolute;
+    left: 30em;
+    top: 18em;
+}
+
+
