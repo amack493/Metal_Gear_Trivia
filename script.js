@@ -1,6 +1,11 @@
 console.log('HELLO TRE');
 
 
+// const imgA = document.getElementById('qA');
+
+// const imgB = document.getElementById('qB');
+
+// const imgC = document.getElementById('qC');
 
 const start = document.getElementById('start');
 
@@ -22,6 +27,8 @@ const lives = document.getElementById('lifebar');
 
 const scoreDiv = document.getElementById('scoreContainer');
 
+const sIDiv = document.getElementById('scoreImageContainer');
+
 const end = document.getElementById('end');
 
 const restart = document.getElementById('restart');
@@ -30,73 +37,75 @@ const restart = document.getElementById('restart');
 let questions = [
     {
         question: "Who's the main character in Metal Gear Solid?",
-        
-        choiceA: 'Solid Snake',
-        choiceB: 'Psycho Mantis',
-        choiceC: 'Revolver Ocelot',
+
+        choiceA: 'Solid  Snake',
+        
+        choiceB: 'Psycho  Mantis',
+        
+        choiceC: 'Revolver  Ocelot',
         
         correct: 'A'
     },{
         question: 'Who was the developer for the  Metal Gear series?',
-            choiceA: 'Genndy Tartakovsky',
-            choiceB: 'Hideo Kojima',
-            choiceC: 'Stephen Hillenberg',
+            choiceA: 'Genndy  Tartakovsky',
+            choiceB: 'Hideo  Kojima',
+            choiceC: 'Stephen  Hillenberg',
         
         correct: 'B'
     },{
         question: "What's the best disguise?",
         
-        choiceA: 'A cardboard Box',
-        choiceB: 'An Enemy Uniform',
-        choiceC: 'A fake mustache',
+        choiceA: 'A  cardboard  Box',
+        choiceB: 'An  Enemy  Uniform',
+        choiceC: 'A  fake  mustache',
         
         correct: 'A'
     },{
         question: "Who was the main antagonist of Metal Gear Solid?",
 
-        choiceA: 'Colonel Campbell',
-        choiceB: 'Vulcan Raven',
-        choiceC: 'Liquid Snake',
+        choiceA: 'Colonel  Campbell',
+        choiceB: 'Vulcan  Raven',
+        choiceC: 'Liquid  Snake',
 
         correct: 'C'
     },{
         question: 'What tank was being developed by Dr. Sokolov?',
 
         choiceA: 'Peacewalker',
-        choiceB: 'The Shagohad',
-        choiceC: 'Metal Gear Rex',
+        choiceB: 'The  Shagohad',
+        choiceC: 'Metal  Gear  Rex',
 
         correct: 'B'
     },{
         question: 'In which game did Hideo Kojima make a cameo appearance?',
 
-        choiceA: 'MG Portable Ops',
-        choiceB: 'Metal Gear Rising: Revengeance',
-        choiceC: 'MG Ground Zeroes',
+        choiceA: 'MG  Portable  Ops',
+        choiceB: 'Metal  Gear  Rising:  Revengeance',
+        choiceC: 'MG  Ground  Zeroes',
 
         correct: 'C'
     },{
-        question: 'Which character made the most recurring appearance?',
+        question: 'Which character made the most recurring appearances?',
 
-        choiceA: 'Revolver Ocelot',
-        choiceB: 'Big Boss',
+        choiceA: 'Revolver  Ocelot',
+        choiceB: 'Big  Boss',
         choiceC: 'Raiden',
 
         correct: 'A'
     },{
         question: 'What console was the first Metal Gear released for?',
 
-        choiceA: 'MSX2 computer',
+        choiceA: 'MSX2  computer',
         choiceB: 'Playstation',
-        choiceC: 'Playstation 2',
+        choiceC: 'Playstation  2',
 
         correct: 'A'
     },{
         question: 'What was the name of the mercenary group led by Big Boss in MGS The Phantom Pain?',
 
         choiceA: 'Foxhound',
-        choiceB: 'Diamond Dogs',
-        choiceC: 'Militaires Sans Frontières',
+        choiceB: 'Diamond  Dogs',
+        choiceC: 'Militaires  Sans  Frontières',
 
         correct: 'B'
      }//,{
@@ -126,24 +135,23 @@ const lastQuestion = questions.length - 1;
 
 let currentQuestion = 0;
 
-function checkAnswer(answer){
-    if(questions[currentQuestionIndex.correct == answer]){
-        score++;
-        answerIsCorrect();
-    }else{
-        answerIsWrong();
-    }
-    if(currentQuestionIndex < lastQuestionIndex){
-        count = 0;
-        currentQuestionIndex++;
-        showQuestion();
-    }else{
+// function checkAnswer(answer){
+//     if(questions[currentQuestionIndex.correct == answer]){
+//         score++;
+//         // answerIsCorrect();
+//     }else{
+//         // answerIsWrong();
+//     }
+//     if(currentQuestionIndex < lastQuestionIndex){
+//         count = 0;
+//         currentQuestionIndex++;
+//         showQuestion();
+//     }else{
         
-        showScore();
+//         showScore();
 
-    }
-}
-     
+//     }
+// }
     
 
 //shows questions
@@ -166,22 +174,17 @@ function showQuestion (){
 function showScore(){
     scoreDiv.style.display = 'block';
     let ScorePercent = Math.round(100 * score / questions.length);
-    scoreDiv.innerHTML = "<p>" + ScorePercent +"%</p>";
+    // if(scorePercent >=80) "<p>" + 'Wow you really know your Metal Gear!' + "</p>";{  
+    // }else{
+    //  if(scorePercent >=60) = "<p>" + "Not bad! You're pretty good!" + "</p>";
+    //    (scorePercent >=40) = "<p>" + 'Better luck next time!' + "</p>";
+    //     (scorePercent >=20) = "<p>" + 'Maybe you need to play some more' + "</p>";
+    scoreDiv.innerHTML += "<p>You got " + ScorePercent +"% correct</p>";
 }
+
 score=0;
 //shows questions until end of quiz then shows percent
-function checkAnswer(answer) {
-    if(answer == questions[currentQuestion].correct) {
-        score++;
-    }
-    if(currentQuestion < lastQuestion) {
-        currentQuestion++;
-        showQuestion();
-    }else{
-    
-    showScore(); 
-    }
-}
+
     // function restartQuiz(){
     //     if(currentQuestionIndex == lastQuestionIndex){
     //         restart.addEventListener("click", restartQuiz);
@@ -194,7 +197,19 @@ function checkAnswer(answer) {
     //     }
     // }
     
-
+    function checkAnswer(answer) {
+        if(answer == questions[currentQuestion].correct) {
+            score++;
+        }
+        if(currentQuestion < lastQuestion) {
+            currentQuestion++;
+            showQuestion();
+        }else{
+        
+        showScore(); 
+        showScoreImg();
+        }
+    }
 
 
 

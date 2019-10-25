@@ -2,7 +2,14 @@
     font-family:MetalGear;
     src: url(metal-gear-solid/METAG___.TTF)
 }
-
+@font-face {
+    font-family:mgsmenu;
+    src: url(metal-gear-solid/MGS2MENU.TTF)
+}
+@font-face {
+    font-family:mgs2;
+    src: url(metal-gear-solid/MGS2.ttf)
+}
 
 
 body {
@@ -15,6 +22,7 @@ main {
 }
 
 .choice {
+    font-family:mgs2;
     cursor: pointer;
     font-size: 35px;
     padding: 10px;
@@ -53,32 +61,45 @@ margin-left: 5em;
 }
 
 #scoreContainer {
-z-index: 1;
-background: white;
+z-index: 2;
+background:rgba(100, 100, 100, .8);
 font-size: 50px;
 position: absolute;
 bottom: .6em;
 /* left: 5em; */
-padding: 225px 665px;
+padding: 173px 448px;
+font-family: mgsmenu;
 animation:fadeIn ease 3s;
+color: red;
+}
+
+#scoreImageContainer {
+    position: absolute;
+    z-index:1;
 }
 
 #A{
     position: absolute;
-    top:18em;
+    top:14em;
     left: 2em;
 }
 
 #B{
     position: absolute;
     left: 15em;
-    top: 18em;
+    top: 14em;
 }
 
 #C{
     position: absolute;
     left: 30em;
-    top: 18em;
+    top: 14em;
 }
 
-
+h2 {
+    font-family:Arial, Helvetica, sans-serif;
+    padding-top: 4em;
+    text-align: center;
+    font-size: 50px;
+    color: red;
+}
