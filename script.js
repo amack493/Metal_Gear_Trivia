@@ -1,12 +1,6 @@
 console.log('HELLO TRE');
 
 
-// const imgA = document.getElementById('qA');
-
-// const imgB = document.getElementById('qB');
-
-// const imgC = document.getElementById('qC');
-
 const start = document.getElementById('start');
 
 const quiz = document.getElementById('quiz');
@@ -135,25 +129,6 @@ const lastQuestion = questions.length - 1;
 
 let currentQuestion = 0;
 
-// function checkAnswer(answer){
-//     if(questions[currentQuestionIndex.correct == answer]){
-//         score++;
-//         // answerIsCorrect();
-//     }else{
-//         // answerIsWrong();
-//     }
-//     if(currentQuestionIndex < lastQuestionIndex){
-//         count = 0;
-//         currentQuestionIndex++;
-//         showQuestion();
-//     }else{
-        
-//         showScore();
-
-//     }
-// }
-    
-
 //shows questions
 function showQuestion (){
     let q = questions[currentQuestion];
@@ -174,6 +149,7 @@ function showQuestion (){
 function showScore(){
     scoreDiv.style.display = 'block';
     let ScorePercent = Math.round(100 * score / questions.length);
+    //supposed to display message per percent score
     // if(scorePercent >=80) "<p>" + 'Wow you really know your Metal Gear!' + "</p>";{  
     // }else{
     //  if(scorePercent >=60) = "<p>" + "Not bad! You're pretty good!" + "</p>";
