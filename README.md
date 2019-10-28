@@ -1,11 +1,11 @@
 # Metal_Gear_Trivia
 ---------------------
-#Goal
+# Goal
 See how much you know about the Metal Gear series
 -----------------------------------------------
 
 
-##Languages Used
+## Languages Used
 ----------------
 * HTML
 * CSS
